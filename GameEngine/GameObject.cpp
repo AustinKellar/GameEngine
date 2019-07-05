@@ -3,6 +3,16 @@
 GameObject::GameObject()
 {
 	position = nullptr;
+	width = 0;
+	height = 0;
+	half_width = 0;
+	half_height = 0;
+	velocity = nullptr;
+	area = 0;
+	ul = nullptr;
+	ur = nullptr;
+	ll = nullptr;
+	lr = nullptr;
 }
 
 GameObject::GameObject(Vector2* position, float width, float height)
@@ -40,7 +50,6 @@ void GameObject::applyPhysics()
 
 void GameObject::draw()
 {
-
 	glBegin(GL_QUADS);
 
 	ll->x = position->x - half_width;

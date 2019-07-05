@@ -74,7 +74,7 @@ void Engine::init()
 
 void Engine::update()
 {
-	for (int i = 0; i < game_objects->size(); i++) 
+	for (size_t i = 0; i < game_objects->size(); i++) 
 	{
 		(*game_objects)[i]->update();
 	}
