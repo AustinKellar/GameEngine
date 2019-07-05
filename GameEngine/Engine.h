@@ -18,7 +18,7 @@ class Engine
 		~Engine();
 
 		// methods
-		void startGame(int* argc, char** argv);
+		void startGame();
 		GameObject* instantiate(GameObject* game_object);
 	private:
 		void init();

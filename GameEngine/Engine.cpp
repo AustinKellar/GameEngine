@@ -17,7 +17,7 @@ Engine::~Engine()
 
 // public methods
 
-void Engine::startGame(int* argc, char ** argv)
+void Engine::startGame()
 {
 	GLFWwindow* window;
 

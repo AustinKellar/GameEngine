@@ -36,7 +36,6 @@ void GameObject::applyPhysics()
 {
 	this->position->x += this->velocity->x;
 	this->position->y += this->velocity->y;
-	std::cout << "position: " << this->position->x << std::endl;
 }
 
 void GameObject::draw()
