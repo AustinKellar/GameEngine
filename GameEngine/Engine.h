@@ -1,4 +1,6 @@
-#include <gl/freeglut.h>
+#include <GLFW/glfw3.h>
+#include "GameObject.h"
+#include <vector>
 
 class Engine;
 static Engine* instance;
@@ -10,8 +12,6 @@ class Engine
 		char* window_title;
 		int window_height;
 		int window_width;
-		int window_x;
-		int window_y;
 
 		// constructor and destructor
 		Engine(char* window_title, int window_width, int window_height);
@@ -19,12 +19,11 @@ class Engine
 
 		// methods
 		void startGame(int* argc, char** argv);
+		GameObject* instantiate(GameObject* game_object);
 	private:
-		void centerOnScreen();
 		void init();
-		void drawObject();
+		void update();
 		void display();
-		void setupDisplayCallback();
-		static void displayCallback();
+		std::vector<GameObject*>* game_objects;
 };
 
